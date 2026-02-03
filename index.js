@@ -44,3 +44,29 @@ console.log(primeNumbers[1], "Mistake detected");
 // Correct the mistake
 primeNumbers[1] = 3;
 console.log("primeNumbers:", primeNumbers);
+
+// === Operators ===
+
+// Arithmetic operators
+let a = 15;
+let b = 4;
+console.log("Sum:", a + b);
+console.log("Product:", a * b);
+console.log("Modulus:", a % b);
+
+// Comparison operators
+let x = 10;
+let y = 20;
+console.log("x == y:", x == y);
+console.log("x != y:", x != y);
+console.log("x > y:", x > y);
+console.log("x < y:", x < y);
+console.log("x >= y:", x >= y);
+console.log("x <= y:", x <= y);
+
+// Logical operators
+let isTrue = true;
+let isFalse = false;
+console.log("isTrue && isFalse:", isTrue && isFalse);
+console.log("isTrue || isFalse:", isTrue || isFalse);
+console.log("!isTrue:", !isTrue);
