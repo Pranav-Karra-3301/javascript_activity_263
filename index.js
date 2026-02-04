@@ -90,3 +90,53 @@ while (score > 0) {
     score--;
 }
 console.log("Score after while loop:", score);
+
+// === Functions ===
+
+// Event countdown function
+// This function takes a date string as input and calculates how much time is left until that date.
+// It creates two Date objects: one for now and one for the event. It subtracts them to get the
+// difference in milliseconds, then converts that into days, hours, minutes, and seconds using
+// Math.floor and the modulus operator (%). It returns a formatted string showing the countdown.
+function eventCountdown(eventDate) {
+    const now = new Date();
+    const event = new Date(eventDate);
+    const timeDiff = event - now;
+    let seconds = Math.floor(timeDiff / 1000);
+    let minutes = Math.floor(seconds / 60);
+    let hours = Math.floor(minutes / 60);
+    let days = Math.floor(hours / 24);
+    hours %= 24;
+    minutes %= 60;
+    seconds %= 60;
+    return `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds remaining until the event.`;
+}
+
+const countdownMessage = eventCountdown('December 31, 2024 23:59:59');
+console.log(countdownMessage);
+
+// Swap function: a -> b, b -> c, c -> a
+function swap(a, b, c) {
+    let temp = a;
+    a = b;
+    b = c;
+    c = temp;
+    console.log("After swap: a =", a, ", b =", b, ", c =", c);
+}
+
+console.log("Before swap: a = 1, b = 2, c = 3");
+swap(1, 2, 3);
+
+// Find longest word function
+function findLongestWord(sentence) {
+    const words = sentence.split(' ');
+    let longest = words[0];
+    for (let i = 1; i < words.length; i++) {
+        if (words[i].length > longest.length) {
+            longest = words[i];
+        }
+    }
+    return longest;
+}
+
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
