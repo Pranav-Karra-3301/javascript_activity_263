@@ -70,3 +70,23 @@ let isFalse = false;
 console.log("isTrue && isFalse:", isTrue && isFalse);
 console.log("isTrue || isFalse:", isTrue || isFalse);
 console.log("!isTrue:", !isTrue);
+
+// === Control Flow ===
+
+// If-else statement
+if (score > 50) {
+    console.log("Great job!");
+} else {
+    console.log("Keep trying!");
+}
+
+// For loop over primeNumbers
+for (let i = 0; i < primeNumbers.length; i++) {
+    console.log(primeNumbers[i]);
+}
+
+// While loop decrementing score to 0
+while (score > 0) {
+    score--;
+}
+console.log("Score after while loop:", score);
