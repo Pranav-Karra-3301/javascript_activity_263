@@ -1,60 +1,46 @@
-// Part 1: JavaScript Basics
+// pranav karra
+// cmpsc 263 - javascript activity
 
-// === Variables and Data Types ===
-
-// Integer variable
+// variables and data types
 let score = 100;
-
-// Float variable
 let temperature = 36.6;
-
-// String variable
 let greeting = "Hello, JavaScript!";
-
-// Boolean variable
 let isLearningFun = true;
 
-// Print all variables
 console.log("score:", score);
 console.log("temperature:", temperature);
 console.log("greeting:", greeting);
 console.log("isLearningFun:", isLearningFun);
 
-// === Objects and Arrays ===
-
-// Create a student object
+// objects and arrays
 let student = {
     name: "John",
     age: 20,
     subjects: ["Math", "Science", "English"]
 };
 
-// Add a new property
 student.isGraduated = false;
-
 console.log("student:", student);
 
-// Create an array of the first five prime numbers
+// first five primes
 let primeNumbers = [2, 3, 5, 7, 11];
 
-// Change the second element to 4 (not prime)
+// oops changing second element to 4
 primeNumbers[1] = 4;
 console.log(primeNumbers[1], "Mistake detected");
 
-// Correct the mistake
+// fixing it back to 3
 primeNumbers[1] = 3;
 console.log("primeNumbers:", primeNumbers);
 
-// === Operators ===
-
-// Arithmetic operators
+// operators
 let a = 15;
 let b = 4;
 console.log("Sum:", a + b);
 console.log("Product:", a * b);
 console.log("Modulus:", a % b);
 
-// Comparison operators
+// comparing x and y
 let x = 10;
 let y = 20;
 console.log("x == y:", x == y);
@@ -64,40 +50,36 @@ console.log("x < y:", x < y);
 console.log("x >= y:", x >= y);
 console.log("x <= y:", x <= y);
 
-// Logical operators
+// logical stuff
 let isTrue = true;
 let isFalse = false;
 console.log("isTrue && isFalse:", isTrue && isFalse);
 console.log("isTrue || isFalse:", isTrue || isFalse);
 console.log("!isTrue:", !isTrue);
 
-// === Control Flow ===
-
-// If-else statement
+// control flow
 if (score > 50) {
     console.log("Great job!");
 } else {
     console.log("Keep trying!");
 }
 
-// For loop over primeNumbers
+// looping through primes
 for (let i = 0; i < primeNumbers.length; i++) {
     console.log(primeNumbers[i]);
 }
 
-// While loop decrementing score to 0
+// while loop to bring score down to 0
 while (score > 0) {
     score--;
 }
 console.log("Score after while loop:", score);
 
-// === Functions ===
+// functions
 
-// Event countdown function
-// This function takes a date string as input and calculates how much time is left until that date.
-// It creates two Date objects: one for now and one for the event. It subtracts them to get the
-// difference in milliseconds, then converts that into days, hours, minutes, and seconds using
-// Math.floor and the modulus operator (%). It returns a formatted string showing the countdown.
+// this function basically takes in a future date and figures out how long until that date
+// it gets the current time with new Date() and the event time, subtracts them to get milliseconds
+// then it just divides down to get days/hours/mins/secs and uses % to get the remainders
 function eventCountdown(eventDate) {
     const now = new Date();
     const event = new Date(eventDate);
@@ -115,7 +97,7 @@ function eventCountdown(eventDate) {
 const countdownMessage = eventCountdown('December 31, 2024 23:59:59');
 console.log(countdownMessage);
 
-// Swap function: a -> b, b -> c, c -> a
+// swap function - moves a to b, b to c, c to a using a temp variable
 function swap(a, b, c) {
     let temp = a;
     a = b;
@@ -127,7 +109,7 @@ function swap(a, b, c) {
 console.log("Before swap: a = 1, b = 2, c = 3");
 swap(1, 2, 3);
 
-// Find longest word function
+// finds the longest word by splitting the sentence and looping through
 function findLongestWord(sentence) {
     const words = sentence.split(' ');
     let longest = words[0];
